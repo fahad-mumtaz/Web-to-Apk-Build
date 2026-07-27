@@ -201,7 +201,7 @@ This project is licensed under the MIT License.
 
 ## 📞 Support
 
-For support, email support@vibe2apk.com or open an issue on GitHub.
+For support, email fahadmumtaz042@gmail.com or open an issue on GitHub.
 
 ---
 
