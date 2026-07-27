@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+ * VIBE2APK PREMIUM DESIGN SYSTEM
+ * Cyber-Industrial Premium Aesthetic
+ */
+
+@layer base {
+  :root {
+    /* Premium Color Palette */
+    --background: 10 10 15;
+    --foreground: 248 250 252;
+    --card: 15 15 20;
+    --card-foreground: 248 250 252;
+    --popover: 15 15 20;
+    --popover-foreground: 248 250 252;
+    --primary: 139 92 246;
+    --primary-foreground: 248 250 252;
+    --secondary: 6 182 212;
+    --secondary-foreground: 10 10 15;
+    --muted: 30 30 35;
+    --muted-foreground: 148 163 184;
+    --accent: 6 182 212;
+    --accent-foreground: 248 250 252;
+    --destructive: 239 68 68;
+    --destructive-foreground: 248 250 252;
+    --success: 16 185 129;
+    --warning: 245 158 43;
+    --border: 30 30 35;
+    --input: 30 30 35;
+    --ring: 139 92 246;
+  }
+
+  .dark {
+    --background: 10 10 15;
+    --foreground: 248 250 252;
+    --card: 15 15 20;
+    --card-foreground: 248 250 252;
+    --popover: 15 15 20;
+    --popover-foreground: 248 250 252;
+    --primary: 139 92 246;
+    --primary-foreground: 248 250 252;
+    --secondary: 6 182 212;
+    --secondary-foreground: 10 10 15;
+    --muted: 30 30 35;
+    --muted-foreground: 148 163 184;
+    --accent: 6 182 212;
+    --accent-foreground: 248 250 252;
+    --destructive: 239 68 68;
+    --destructive-foreground: 248 250 252;
+    --success: 16 185 129;
+    --warning: 245 158 43;
+    --border: 30 30 35;
+    --input: 30 30 35;
+    --ring: 139 92 246;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+  }
+  
+  code, pre {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply relative overflow-hidden;
+    background: rgba(15, 15, 20, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(139, 92, 246, 0.1);
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+  
+  .gradient-mesh {
+    background: 
+      radial-gradient(ellipse at 20% 20%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 80%, rgba(6, 182, 212, 0.1) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 50%, rgba(245, 158, 43, 0.05) 0%, transparent 50%);
+    animation: gradientShift 15s ease-in-out infinite;
+  }
+  
+  @keyframes gradientShift {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  .grid-pattern {
+    background-image: 
+      linear-gradient(rgba(139, 92, 246, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(139, 92, 246, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: gridMove 20s linear infinite;
+  }
+  
+  @keyframes gridMove {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 50px 50px;
+    }
+  }
+  
+  .btn-primary {
+    @apply relative overflow-hidden px-8 py-4 rounded-xl font-semibold transition-all duration-300;
+    background: linear-gradient(135deg, rgb(139, 92, 246), rgb(124, 58, 237));
+    box-shadow: 
+      0 4px 15px rgba(139, 92, 246, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+      0 8px 25px rgba(139, 92, 246, 0.5),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+  
+  .btn-secondary {
+    @apply relative overflow-hidden px-8 py-4 rounded-xl font-semibold transition-all duration-300;
+    background: linear-gradient(135deg, rgb(6, 182, 212), rgb(8, 145, 178));
+    box-shadow: 
+      0 4px 15px rgba(6, 182, 212, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  
+  .btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+      0 8px 25px rgba(6, 182, 212, 0.5),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+  
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background: linear-gradient(135deg, rgb(139, 92, 246), rgb(6, 182, 212));
+  }
+  
+  .gradient-text-alt {
+    @apply bg-clip-text text-transparent;
+    background: linear-gradient(135deg, rgb(6, 182, 212), rgb(16, 185, 129));
+  }
+  
+  .float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+}
