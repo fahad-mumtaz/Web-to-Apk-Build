@@ -1,6 +1,8 @@
+**Status: Dashboard prototype.** This repository contains the Next.js/Supabase dashboard and user interface. Creating a build stores a record in Supabase with status "queued". No APK or AAB generation worker is included in this repository, so converting a website to an APK/AAB file is not implemented here. Plan limits and pricing shown in the interface are part of the prototype.
+
 # Vibe2APK - Web to Android APK Converter SaaS
 
-A premium SaaS platform that converts web applications into native Android APK/AAB files in minutes. Built with Next.js 14, Supabase, and a modern cyber-industrial design system.
+A dashboard prototype for a service that would convert web applications into native Android APK/AAB files. APK/AAB generation is not implemented in this repository. Built with Next.js 14, Supabase, and a modern cyber-industrial design system.
 
 ## 🚀 Features
 
@@ -46,7 +48,7 @@ A premium SaaS platform that converts web applications into native Android APK/A
 ## 📦 Installation
 
 ### Prerequisites
-- Node.js 18+ 
+- Node.js 18+
 - npm or yarn
 - Supabase account
 
